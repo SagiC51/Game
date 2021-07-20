@@ -14,18 +14,17 @@ xb=50
 yb=20
 C.create_rectangle(xh,yh,xb,yb,outline='red')
 while yb != y1-2:
-    xh=xb
-    xb +=50
-    #if xb == x1-12:
-    #    xh= 0
-    #   xb = 50
-    #    yh=yb
-    #    yb +=20 
+    if xb == x1-12:
+        xh= 0
+        xb = 50
+        yh=yb
+        yb +=20 
+    else:    
+        xh=xb
+        xb +=50
     C.create_rectangle(xh,yh,xb,yb,outline='red')
          
 C.grid(row = 0, column = 3, columnspan = 4)
-
-
 
 ####################### Fin du programme  ###########################
 
