@@ -1,10 +1,10 @@
 import tkinter as tk
 import random as rd
-import pygame as py
+import pygame
 fenetre = tk.Tk()
 
-py.pygame.mixer.init()
-py.pygame.mixer.music.load("Casse_brick_song.mp3")
+pygame.mixer.init()
+pygame.mixer.music.load("Casse_brick_song.mp3")
 
 
 CANVAS_WIDTH = CANVAS_HEIGHT = 500
@@ -178,6 +178,14 @@ def lose():
         start = False
         music()
         
+def music():
+    if en_cours == False :
+        pygame.mixer.music.pause()
+    elif en_cours == True:
+        pygame.mixer.music.unpause()
+    if start == True:
+        pygame.mixer.music.play(-1)
+
 def restart():
     global Victory, life, en_cours, msg, nbr_brick, nbr_brick_i
     if Victory == True :
@@ -234,14 +242,6 @@ def A_propos():
     text = text + "3. Utilsez les fléches de votre clavier pour déplacer le padle."
     label = tk.Label(propos, text = text, foreground= BG, font= ("Times New Roman", 15))
     label.grid(row= 0, column=0)
-
-def music():
-    if en_cours == False :
-        py.pygame.mixer.music.pause()
-    elif en_cours == True:
-        py.pygame.mixer.music.unpause()
-    if start == True:
-        py.pygame.mixer.music.play(-1)
 
 def quit():
     fenetre.destroy()
