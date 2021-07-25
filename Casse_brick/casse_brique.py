@@ -1,11 +1,6 @@
 import tkinter as tk
 import random as rd
-import pygame
 fenetre = tk.Tk()
-
-pygame.mixer.init()
-#pygame.mixer.music.load("Casse_brick_song.mp3")
-
 
 CANVAS_WIDTH = CANVAS_HEIGHT = 500
 X1 = Y1 = 0
@@ -179,12 +174,7 @@ def lose():
         music()
         
 def music():
-    if en_cours == False :
-        pygame.mixer.music.pause()
-    elif en_cours == True:
-        pygame.mixer.music.unpause()
-    if start == True:
-        pygame.mixer.music.play(-1)
+    pass
 
 def restart():
     global Victory, life, en_cours, msg, nbr_brick, nbr_brick_i
