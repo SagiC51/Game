@@ -4,7 +4,7 @@ import pygame
 fenetre = tk.Tk()
 
 pygame.mixer.init()
-pygame.mixer.music.load("Casse_brick_song.mp3")
+#pygame.mixer.music.load("Casse_brick_song.mp3")
 
 
 CANVAS_WIDTH = CANVAS_HEIGHT = 500
@@ -238,8 +238,7 @@ def help():
 def A_propos():
     propos = tk.Toplevel(fenetre, bg= INV_BG, width=100, height=100)
     propos.title("A propos")
-    text = "Jeu fait par\n CHRISTOPHE Pascal\n Audio: "
-    text = text + "3. Utilsez les fléches de votre clavier pour déplacer le padle."
+    text = "A propos :\n 0Jeu fait par :\n CHRISTOPHE Pascal\n Audio: Restart de Will & Tim"
     label = tk.Label(propos, text = text, foreground= BG, font= ("Times New Roman", 15))
     label.grid(row= 0, column=0)
 
